@@ -48,11 +48,11 @@ Install and enable [mage-os/module-passkey-auth](https://github.com/mage-os/modu
    bin/magento setup:upgrade
    ```
 
-4. In production mode, compile and deploy static content. List every locale your store views use, for example `it_IT en_US`:
+4. In production mode, compile and deploy static content. List every locale your store views use, for example `en_US it_IT`:
 
    ```bash
    bin/magento setup:di:compile
-   bin/magento setup:static-content:deploy it_IT en_US
+   bin/magento setup:static-content:deploy en_US it_IT
    ```
 
 5. Clear the cache and leave maintenance mode:
@@ -111,7 +111,7 @@ Read the [CHANGELOG](CHANGELOG.md) before updating, and back up your code and da
    ```bash
    bin/magento setup:upgrade
    bin/magento setup:di:compile
-   bin/magento setup:static-content:deploy it_IT en_US
+   bin/magento setup:static-content:deploy en_US it_IT
    bin/magento cache:flush
    bin/magento maintenance:disable
    ```
@@ -185,7 +185,7 @@ To only hide the button for a while, disable the module (step 2) and skip removi
    ```bash
    bin/magento setup:upgrade
    bin/magento setup:di:compile
-   bin/magento setup:static-content:deploy it_IT en_US
+   bin/magento setup:static-content:deploy en_US it_IT
    bin/magento cache:flush
    bin/magento maintenance:disable
    ```
