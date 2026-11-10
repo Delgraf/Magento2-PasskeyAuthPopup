@@ -1,0 +1,40 @@
+{
+    "name": "delgraf/module-passkey-auth-popup",
+    "description": "Adds passkey (WebAuthn) sign-in to Magento 2's authentication popup, as an add-on for mage-os/module-passkey-auth",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "keywords": [
+        "magento2",
+        "magento2-module",
+        "mage-os",
+        "passkey",
+        "webauthn",
+        "login",
+        "authentication-popup"
+    ],
+    "homepage": "https://github.com/Delgraf/Magento2-PasskeyAuthPopup",
+    "authors": [
+        {
+            "name": "Delgraf",
+            "homepage": "https://www.delgraf.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Delgraf/Magento2-PasskeyAuthPopup/issues",
+        "source": "https://github.com/Delgraf/Magento2-PasskeyAuthPopup"
+    },
+    "require": {
+        "php": ">=8.2",
+        "magento/framework": "*",
+        "magento/module-customer": "*",
+        "mage-os/module-passkey-auth": "^1.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Delgraf\\PasskeyAuthPopup\\": ""
+        }
+    }
+}

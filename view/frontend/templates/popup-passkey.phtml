@@ -1,0 +1,19 @@
+<?php declare(strict_types=1);
+/**
+ * Copyright © Delgraf. All rights reserved.
+ * Licensed under the Open Software License version 3.0 (OSL-3.0). See LICENSE.txt for license details.
+ */
+
+/** @var \MageOS\PasskeyAuth\Block\Login\ConditionalLogin $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Delgraf_PasskeyAuthPopup/js/popup-passkey": {
+            "optionsUrl": "<?= $escaper->escapeUrl($block->getOptionsUrl()) ?>",
+            "verifyUrl": "<?= $escaper->escapeUrl($block->getVerifyUrl()) ?>"
+        }
+    }
+}
+</script>

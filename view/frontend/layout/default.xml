@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Delgraf. All rights reserved.
+ * Licensed under the Open Software License version 3.0 (OSL-3.0). See LICENSE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--
+            Adds passkey sign-in to the core authentication popup (header "Sign In" modal).
+            ConditionalLogin renders nothing for signed-in customers and builds the
+            verify URL without a referer, so a successful sign-in stays on the current page.
+        -->
+        <referenceContainer name="before.body.end">
+            <block class="MageOS\PasskeyAuth\Block\Login\ConditionalLogin"
+                   name="delgraf.passkey.auth.popup"
+                   template="Delgraf_PasskeyAuthPopup::popup-passkey.phtml"
+                   ifconfig="customer/passkey/enabled"/>
+        </referenceContainer>
+    </body>
+</page>
